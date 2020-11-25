@@ -23,5 +23,10 @@ def stat():
     return template.render()
 
 
+@app.route('/search')
+def search():
+    template = env.get_template('search.html')
+    return template.render()
+
 if __name__ == '__main__':
     app.run(host='localhost', port=5000, debug = True)
