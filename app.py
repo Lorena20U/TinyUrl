@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    template = env.get_template('layout.html')
+    template = env.get_template('tiny.html')
     return template.render()
 
 @app.route('/urls')

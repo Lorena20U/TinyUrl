@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block tit %} Tiny Urls {% endblock %}
+
+{% block enc %} ¡Bienvenido! {% endblock %}
+
+{% block contenido%}
+<div class="container-xl">
+    <div class="card-body">
+        <h5>¿Que es un Tiny Url?</h5>
+        <p class="card-text">Es un servicio de acortamiento de links. Esto te permitira convertir una url grande
+            a una pequeña, inclusive ¡es más fácil de recordar! Esta pagina te proporcionara un token unico que
+            se utilizara para redireccionarte al link original.</p>
+        <p>¿Necesitas un Tiny? Que esperas, es facil y sencillo.</p>
+    </div>
+    <form>
+        <div class="p-4 pb"><strong>Introduzca una URL larga para hacerla tiny: </strong></div>
+        <div class="row mb-3">
+            <div class="col">
+                <label for="formGroupExampleInput">Link: </label>
+                <input type="text" class="form-control" placeholder="  http://example.com/hi/d/sdfghjkjh4h3-dgsdg/-0"
+                    name="link" required>
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput">Custom alias (opcional): </label>
+                <input type="text" class="form-control" placeholder="  Palabra unica que pueda identificar su URL"
+                    name="custom">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mb-3">Crear</button>
+    </form>
+    <div class="p-4 container-xl mb-3">
+        <form>
+            <div class="form-group  container mb-3" style="width: 25rem;">
+                <label for="formGroupExampleInput">
+                    <h5>Resultado:</h5>
+                </label>
+                <input type="text" class="form-control text-success" placeholder="Tu tiny.." name="respuesta" id="resp">
+            </div>
+            <button onclick="copiar()" class="btn btn-primary">Copiar Link</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
