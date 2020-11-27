@@ -9,5 +9,26 @@
 {% endblock %}
 
 {% block contenido%}
-<p>Hola, Search</p>
+<div class="container-xl" style="width: 50rem;">
+    <form class="form-group">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="search" required>
+        <button class="btn btn-outline-success my-2 my-sm-3" type="submit">Buscar</button>
+    </form>
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">TinyUrls</th>
+                <th scope="col">Url Original</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 {% endblock %}
