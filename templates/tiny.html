@@ -13,7 +13,7 @@
             se utilizara para redireccionarte al link original.</p>
         <p>¿Necesitas un Tiny? Que esperas, es facil y sencillo.</p>
     </div>
-    <form>
+    <form method="POST">
         <div class="p-4 pb"><strong>Introduzca una URL larga para hacerla tiny: </strong></div>
         <div class="row mb-3">
             <div class="col">
@@ -34,8 +34,9 @@
             <div class="form-group  container mb-3" style="width: 25rem;">
                 <label for="formGroupExampleInput">
                     <h5>Resultado:</h5>
+                    <h7>Link original: {{l}}</h7>
                 </label>
-                <input type="text" class="form-control text-success" placeholder="Tu tiny..." name="respuesta" id="resp">
+                <input type="text" class="form-control text-success" placeholder="Tu tiny..." name="respuesta" id="resp" value="localhost:5000/{{respuesta}}">
             </div>
             <button onclick="copiar()" class="btn btn-primary">Copiar Link</button>
         </form>

@@ -6,24 +6,35 @@
 
 {% block contenido%}
 <div class="container-xl">
-    <table class="table table-striped table-bordered">
+    <form class="container-xl mb-5"style="width: 25rem;">
+        <div class="p-4 pb"><strong>Introduzca el Token del tiny que desea eliminar: </strong></div>
+        <div class="row mb-3">
+            <div class="col">
+                <label for="formGroupExampleInput">localhost:5000/ </label>
+                <input type="text" class="form-control" placeholder="HELLO"
+                    name="elim" required>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mb-3 btn-danger">Eliminar</button>
+    </form>
+    <table class="table table-striped table-bordered mb-5">
         <thead>
             <tr>
-                <th scope="col">#</th>
+                <th scope="col">Fecha de creacion</th>
                 <th scope="col">TinyUrls</th>
                 <th scope="col">Url Original</th>
-                <th scope="col" style="width: 10rem;"></th>
+                <th scope="col">Visitas</th>
             </tr>
         </thead>
         <tbody>
+            {% for a,n in e.items() %}
             <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
-                </td>
+                <td>{{n['creacion']}}</td>
+                <td>{{n['token']}}</td>
+                <td>{{n['url']}}</td>
+                <td>{{n['visitas']}}</td>
             </tr>
+            {% endfor %}
         </tbody>
     </table>
 </div>
